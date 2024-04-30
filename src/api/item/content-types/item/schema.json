@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "items",
+  "info": {
+    "singularName": "item",
+    "pluralName": "items",
+    "displayName": "Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "newArrivals",
+        "bestSellers",
+        "topRated"
+      ]
+    },
+    "releaseDate": {
+      "type": "date"
+    },
+    "rating": {
+      "type": "enumeration",
+      "enum": [
+        "E",
+        "E10",
+        "T",
+        "M"
+      ]
+    },
+    "longDescription": {
+      "type": "text"
+    },
+    "stars": {
+      "type": "decimal"
+    },
+    "numReviews": {
+      "type": "integer"
+    },
+    "platform": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::platform.platform",
+      "inversedBy": "items"
+    }
+  }
+}

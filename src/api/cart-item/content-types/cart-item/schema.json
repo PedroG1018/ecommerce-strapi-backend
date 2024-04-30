@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cart_items",
+  "info": {
+    "singularName": "cart-item",
+    "pluralName": "cart-items",
+    "displayName": "CartItem",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cartId": {
+      "type": "string"
+    },
+    "itemId": {
+      "type": "string"
+    },
+    "count": {
+      "type": "integer"
+    }
+  }
+}
